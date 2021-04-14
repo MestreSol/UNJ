@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="..\..\references\tModLoader.targets" />
+  <PropertyGroup>
+    <AssemblyName>UNJ</AssemblyName>
+    <TargetFramework>net45</TargetFramework>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+  </PropertyGroup>
+  <Target Name="BuildMod" AfterTargets="Build">
+    <Exec Command="&quot;$(tMLBuildServerPath)&quot; -build $(ProjectDir) -eac $(TargetPath) -define &quot;$(DefineConstants)&quot; -unsafe $(AllowUnsafeBlocks)" />
+  </Target>
+  <ItemGroup>
+    <PackageReference Include="tModLoader.CodeAssist" Version="0.1.*" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Glow\" />
+    <Folder Include="Items\Armor\" />
+    <Folder Include="Items\Accessories\" />
+    <Folder Include="Items\Bullet\" />
+    <Folder Include="Items\Weapons\" />
+    <Folder Include="Items\Thopies\" />
+    <Folder Include="Items\Stuffs\" />
+    <Folder Include="Items\Summons\" />
+    <Folder Include="Miscellaneous\" />
+    <Folder Include="Mounts\" />
+    <Folder Include="Fonts\" />
+    <Folder Include="NPCs\" />
+    <Folder Include="VEffects\" />
+    <Folder Include="UIs\" />
+    <Folder Include="Tiles\" />
+    <Folder Include="Sounds\" />
+  </ItemGroup>
+</Project>

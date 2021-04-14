@@ -1,0 +1,3 @@
+displayName = Uma Nova Jornada
+author = MestreSol
+version = 0.1
