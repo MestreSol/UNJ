@@ -19,12 +19,16 @@ namespace UNJ.Items.Pet
 			// DisplayName and Tooltip are automatically set from the .lang files, but below is how it is done normally.
 			DisplayName.SetDefault("Aviãozinho de papel");
 			Tooltip.SetDefault("Evoque um avião de papel magico que te seguirá para sempre");
+
+			//Traduções
+			DisplayName.AddTranslation(GameCulture.Portuguese, "Aviãozinho de papel");
+			Tooltip.AddTranslation(GameCulture.Portuguese, "Evoque um avião de papel magico que te seguirá para sempre");
 		}
 
 		public override void SetDefaults()
 		{
-			item.CloneDefaults(ItemID.ZephyrFish);
-			item.shoot = ProjectileType<Projectiles.Pets.PaperAirplane>();	
+			item.CloneDefaults(ItemID.ZephyrFish);							// Clona o comportamento do ZephyrFish
+			item.shoot = ProjectileType<Projectiles.Pets.PaperAirplane>();	// O pet é um disparo, seta o proprio pet
 			item.buffType = BuffType<Buffs.PaperAirplane>();				// Adiciona o buff do pet pra remover o pet quando precisar
 			
 			item.value = Item.sellPrice(platinum: 1);						// Valor de venda
