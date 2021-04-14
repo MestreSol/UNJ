@@ -24,22 +24,24 @@ namespace UNJ.Items.Pet
 		public override void SetDefaults()
 		{
 			item.CloneDefaults(ItemID.ZephyrFish);
-			item.shoot = ProjectileType<Projectiles.Pets.PaperAirplane>();
-			item.buffType = BuffType<Buffs.PaperAirplane>();
+			item.shoot = ProjectileType<Projectiles.Pets.PaperAirplane>();	
+			item.buffType = BuffType<Buffs.PaperAirplane>();				// Adiciona o buff do pet pra remover o pet quando precisar
 			
-			item.value = Item.sellPrice(platinum: 1);
-			item.value = Item.buyPrice(platinum: 100);
+			item.value = Item.sellPrice(platinum: 1);						// Valor de venda
+			item.value = Item.buyPrice(platinum: 100);						// Valor de compra
 
 		}
 
 		public override void AddRecipes()
 		{
 			
-			ModRecipe recipe = new ModRecipe(mod); // Gera uma receita para o item atual.
-			recipe.AddIngredient(ItemType<MagicPaper>(),25);
-			recipe.AddTile(36);
-			recipe.SetResult(this);
-			recipe.AddRecipe();
+			ModRecipe recipe = new ModRecipe(mod);				// Gera uma receita para o item atual.
+			recipe.AddIngredient(ItemType<MagicPaper>(),25);	// Aponta 1 ingrediente e sua quantidade, por ser um ingrediente do mod fassa-se o chamado assim
+			recipe.AddTile(TileID.WorkBenches);					// Adiciona o lugar que será criado o item, no saco será na bancada de trabalho
+			recipe.SetResult(this);								// Seta o resultado seguido da quantidade, no caso é esta mesma classe seguido por 1 dele
+			recipe.AddRecipe();									// Finaliza a receita
+
+			// Apartir de agora o item MagicPaper terá uma tag de material e o guia terá a criação.
 
 		}
 
