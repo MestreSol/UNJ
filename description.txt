@@ -1,1 +1,5 @@
-Uma Nova Jornada is a pretty cool mod, it does...this. Modify this file with a description of your mod.
+Uma Nova Jornada é um mod amador de testes de mecanica para outros jogos.
+Utilizando a API do Terraria estamos desenvolvendo algumas mecanicas para futuros jogos, caso tenha alguma dica, ideia e principalmente opiniao, por favor preencha o formulario que se encaixa com o que deseja
+
+Feedback
+https://forms.gle/MAZEeFPQUs3AK9f9A

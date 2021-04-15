@@ -14,6 +14,7 @@
     <PackageReference Include="tModLoader.CodeAssist" Version="0.1.*" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Anotaçoes\" />
     <Folder Include="Glow\" />
     <Folder Include="Items\Armor\" />
     <Folder Include="Items\Accessories\" />

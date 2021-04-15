@@ -3,6 +3,8 @@ using Terraria;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 using Microsoft.Xna.Framework;
+using UNJ.Dusts;
+using UNJ.Projectiles.Weapons;
 
 namespace UNJ.Items.Swords
 {
@@ -45,7 +47,9 @@ namespace UNJ.Items.Swords
 
 			//Buffs
 			item.buffTime = 50000;						// Duração do buff; +/- 13 min
-			item.buffType = BuffType<Buffs.TheBuff>();	// Tipo do buff
+			item.buffType = BuffType<Buffs.TheBuff>();  // Tipo do buff
+
+			// item.shoot = ModContent.ProjectileType<BaseProjetil>(); // Adiciona um projetil. TA ZOADO
 		}
 
 		//O item é criavel em uma estação de trabalho
