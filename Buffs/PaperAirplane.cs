@@ -1,24 +1,40 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿// Terraria
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.Localization;
+
+// Statics
 using static Terraria.ModLoader.ModContent;
+
+// Buff do Pet, usado para desativalo
 namespace UNJ.Buffs
 {
     class PaperAirplane : ModBuff
     {
+		
 		public override void SetDefaults()
 		{
-			
+			// Padrao	
 			DisplayName.SetDefault("Aviãozinho de papel");
 			Description.SetDefault("Um exelente companheiro voador");
-			Main.buffNoTimeDisplay[Type] = true;
-			Main.vanityPet[Type] = true;
+			
+			// Defaults
+			Main.buffNoTimeDisplay[Type] = true;	// Desabilita a vizualização de tempo
+			Main.vanityPet[Type] = true;            // Diz que o Buff esta associado ao modulo de PET do inventario, Desativer este buff desativa a visualização do buff
+
+			// Tradução Display
+			DisplayName.AddTranslation(GameCulture.English,		"");	// Ingles
+			DisplayName.AddTranslation(GameCulture.German,		"");	// Alemão
+			DisplayName.AddTranslation(GameCulture.Italian,		"");	// Italiano
+			DisplayName.AddTranslation(GameCulture.French,		"");	// Frances
+			DisplayName.AddTranslation(GameCulture.Spanish,		"");	// Espanhol
+			DisplayName.AddTranslation(GameCulture.Russian,		"");	// Russo
+			DisplayName.AddTranslation(GameCulture.Chinese,		"");	// Chines simplificado
+			DisplayName.AddTranslation(GameCulture.Portuguese,	"");	// Portugues
+			DisplayName.AddTranslation(GameCulture.Polish,		"");	// Polones
+			
+
 		}
 
 		public override void Update(Player player, ref int buffIndex)
