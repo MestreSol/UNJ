@@ -46,8 +46,9 @@ namespace UNJ.Items.Swords
 			item.value = Item.sellPrice(platinum: 0, gold: 0, silver: 0, copper: 1); // Valor para venda
 
 			//Buffs
-			item.buffTime = 50000;						// Duração do buff; +/- 13 min
-			item.buffType = BuffType<Buffs.TheBuff>();  // Tipo do buff
+			
+			item.buffTime = 100000;							// Duração do buff; +/- 13 min
+			item.buffType = BuffType<Buffs.Clima.Frio>();   // Tipo do buff
 
 			// item.shoot = ModContent.ProjectileType<BaseProjetil>(); // Adiciona um projetil. TA ZOADO
 		}

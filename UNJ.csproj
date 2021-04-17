@@ -28,6 +28,7 @@
     <Folder Include="Mounts\" />
     <Folder Include="Fonts\" />
     <Folder Include="NPCs\" />
+    <Folder Include="Source\" />
     <Folder Include="VEffects\" />
     <Folder Include="UIs\" />
     <Folder Include="Tiles\" />
